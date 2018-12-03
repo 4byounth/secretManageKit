@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Keysave : NSObject
 
 +(Byte *)RandomIV;
++(Boolean) SaveKey:(NSData *)priKey :(NSData *)pubKey :(NSString *)account :(NSString *)password;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -17,13 +17,13 @@
 		0436046821ABEAEE008DFA44 /* secretManagerKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0436046721ABEAEE008DFA44 /* secretManagerKitTests.m */; };
 		0436047321ABEAEE008DFA44 /* secretManagerKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0436047221ABEAEE008DFA44 /* secretManagerKitUITests.m */; };
 		0436048221ABEE56008DFA44 /* caculateSignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0436048121ABEE56008DFA44 /* caculateSignViewController.m */; };
-		0444D5D121B4C048004E6D30 /* AESCipher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0444D5D021B4C048004E6D30 /* AESCipher.m */; };
+		0444D5DA21B514EC004E6D30 /* AESCipher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0444D5D921B514EC004E6D30 /* AESCipher.m */; };
+		0444D5DB21B51937004E6D30 /* Keysave.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB7F821B23D9B005F5701 /* Keysave.m */; };
 		04B4D42521ACF47D00BDB498 /* secretManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B4D42421ACF47D00BDB498 /* secretManageViewController.m */; };
 		04B4D43021AD3C0C00BDB498 /* checkSigncontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B4D42F21AD3C0C00BDB498 /* checkSigncontroller.m */; };
 		04B4D43421AD3C7400BDB498 /* caculateFingerprintController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B4D43321AD3C7400BDB498 /* caculateFingerprintController.m */; };
 		04B4D43821AD3C9C00BDB498 /* versionInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B4D43721AD3C9C00BDB498 /* versionInfoController.m */; };
 		04B4D43E21AD3DC400BDB498 /* createAccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B4D43D21AD3DC400BDB498 /* createAccountController.m */; };
-		04FFB7F921B23D9B005F5701 /* Keysave.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB7F821B23D9B005F5701 /* Keysave.m */; };
 		2F2A2C69D24AB47877667EEF /* libPods-secretManagerKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 042A986321AD5945008EF564 /* libPods-secretManagerKit.a */; };
 /* End PBXBuildFile section */
 
@@ -67,9 +67,9 @@
 		0436047421ABEAEE008DFA44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0436048021ABEE56008DFA44 /* caculateSignViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = caculateSignViewController.h; sourceTree = "<group>"; };
 		0436048121ABEE56008DFA44 /* caculateSignViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = caculateSignViewController.m; sourceTree = "<group>"; };
-		0444D5CF21B4C03D004E6D30 /* AESCipher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESCipher.h; sourceTree = "<group>"; };
-		0444D5D021B4C048004E6D30 /* AESCipher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCipher.m; sourceTree = "<group>"; };
 		0444D5D321B4C185004E6D30 /* intTobyte.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = intTobyte.h; sourceTree = "<group>"; };
+		0444D5D821B514EC004E6D30 /* AESCipher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESCipher.h; sourceTree = "<group>"; };
+		0444D5D921B514EC004E6D30 /* AESCipher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESCipher.m; sourceTree = "<group>"; };
 		045B19FD21B1220100A81795 /* create_delegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = create_delegate.h; sourceTree = "<group>"; };
 		04B4D42321ACF47D00BDB498 /* secretManageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = secretManageViewController.h; sourceTree = "<group>"; };
 		04B4D42421ACF47D00BDB498 /* secretManageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = secretManageViewController.m; sourceTree = "<group>"; };
@@ -141,6 +141,7 @@
 		0436044A21ABEAEB008DFA44 /* secretManagerKit */ = {
 			isa = PBXGroup;
 			children = (
+				0444D5D721B514CB004E6D30 /* AES */,
 				04FFB7F621B23D42005F5701 /* general_class */,
 				045B19FB21B121B100A81795 /* protocol */,
 				045B19F921B11E4B00A81795 /* my_c */,
@@ -177,6 +178,15 @@
 				0436047421ABEAEE008DFA44 /* Info.plist */,
 			);
 			path = secretManagerKitUITests;
+			sourceTree = "<group>";
+		};
+		0444D5D721B514CB004E6D30 /* AES */ = {
+			isa = PBXGroup;
+			children = (
+				0444D5D821B514EC004E6D30 /* AESCipher.h */,
+				0444D5D921B514EC004E6D30 /* AESCipher.m */,
+			);
+			path = AES;
 			sourceTree = "<group>";
 		};
 		045B19F921B11E4B00A81795 /* my_c */ = {
@@ -281,8 +291,6 @@
 			children = (
 				04FFB7F721B23D9B005F5701 /* Keysave.h */,
 				04FFB7F821B23D9B005F5701 /* Keysave.m */,
-				0444D5CF21B4C03D004E6D30 /* AESCipher.h */,
-				0444D5D021B4C048004E6D30 /* AESCipher.m */,
 			);
 			path = general_class;
 			sourceTree = "<group>";
@@ -465,16 +473,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0444D5DB21B51937004E6D30 /* Keysave.m in Sources */,
 				04B4D43821AD3C9C00BDB498 /* versionInfoController.m in Sources */,
 				04B4D43E21AD3DC400BDB498 /* createAccountController.m in Sources */,
 				0436045021ABEAEB008DFA44 /* ViewController.m in Sources */,
 				0436044D21ABEAEB008DFA44 /* AppDelegate.m in Sources */,
 				0436045E21ABEAEE008DFA44 /* main.m in Sources */,
+				0444D5DA21B514EC004E6D30 /* AESCipher.m in Sources */,
 				04B4D43021AD3C0C00BDB498 /* checkSigncontroller.m in Sources */,
-				0444D5D121B4C048004E6D30 /* AESCipher.m in Sources */,
 				0436045621ABEAEB008DFA44 /* secretManagerKit.xcdatamodeld in Sources */,
 				0436048221ABEE56008DFA44 /* caculateSignViewController.m in Sources */,
-				04FFB7F921B23D9B005F5701 /* Keysave.m in Sources */,
 				04B4D43421AD3C7400BDB498 /* caculateFingerprintController.m in Sources */,
 				04B4D42521ACF47D00BDB498 /* secretManageViewController.m in Sources */,
 			);

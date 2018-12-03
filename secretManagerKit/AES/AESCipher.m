@@ -1,23 +1,23 @@
 //
 //  AESCipher.m
-//  AESCipher
+//  secretManagerKit
 //
-//  Created by Welkin Xie on 8/13/16.
-//  Copyright © 2016 WelkinXie. All rights reserved.
-//
-//  https://github.com/WelkinXie/AESCipher-iOS
+//  Created by mac  on 2018/12/3.
+//  Copyright © 2018年 mac . All rights reserved.
 //
 
 #import "AESCipher.h"
-#import <CommonCrypto/CommonCryptor.h>
+
+@implementation AESCipher
 
 NSString const *kInitVector = @"A-16-Byte-String";
 size_t const kKeySize = kCCKeySizeAES128;
+NSString *CIPHER = @"AES/CBC/PKCS5Padding";
 
-NSData * cipherOperation(NSData *contentData, NSData *keyData, CCOperation operation,NSData *iv) {
++(NSData *) cipherOperation:(NSData *)contentData :(NSData *)keyData :(CCOperation) operation :(NSData *)iv {
     NSUInteger dataLength = contentData.length;
     
-//    void const *initVectorBytes = [kInitVector dataUsingEncoding:NSUTF8StringEncoding].bytes;
+    //    void const *initVectorBytes = [kInitVector dataUsingEncoding:NSUTF8StringEncoding].bytes;
     void const *contentBytes = contentData.bytes;
     void const *keyBytes = keyData.bytes;
     
@@ -48,42 +48,48 @@ NSData * cipherOperation(NSData *contentData, NSData *keyData, CCOperation opera
     return nil;
 }
 
-NSString * aesEncryptString(NSString *content, NSString *key,NSString *iv) {
++(NSString *) aesEncryptString:(NSString *)content :(NSString *)key :(NSString *)iv {
     NSCParameterAssert(content);
     NSCParameterAssert(key);
     
     NSData *iv_data = [iv dataUsingEncoding:NSUTF8StringEncoding].bytes;
     NSData *contentData = [content dataUsingEncoding:NSUTF8StringEncoding];
     NSData *keyData = [key dataUsingEncoding:NSUTF8StringEncoding];
-    NSData *encrptedData = aesEncryptData(contentData, keyData, iv_data);
+    NSData *encrptedData = [AESCipher aesDecryptData:contentData :keyData :iv_data ];
+//    NSData *encrptedData = aesEncryptData(contentData, keyData, iv_data);
     return [encrptedData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
 }
 
-NSString * aesDecryptString(NSString *content, NSString *key,NSString *iv) {
++(NSString *) aesDecryptString:(NSString *)content : (NSString *)key :(NSString *)iv {
     NSCParameterAssert(content);
     NSCParameterAssert(key);
     
     NSData *iv_data = [iv dataUsingEncoding:NSUTF8StringEncoding].bytes;
     NSData *contentData = [[NSData alloc] initWithBase64EncodedString:content options:NSDataBase64DecodingIgnoreUnknownCharacters];
     NSData *keyData = [key dataUsingEncoding:NSUTF8StringEncoding];
-    NSData *decryptedData = aesDecryptData(contentData, keyData,iv_data);
+    NSData *decryptedData = [AESCipher aesDecryptData:contentData :keyData :iv_data];
+//    NSData *decryptedData = aesDecryptData(contentData, keyData,iv_data);
     return [[NSString alloc] initWithData:decryptedData encoding:NSUTF8StringEncoding];
 }
 
-NSData * aesEncryptData(NSData *contentData, NSData *keyData,NSData *iv) {
++(NSData *) aesEncryptData:(NSData *)contentData : (NSData *)keyData :(NSData *)iv {
     NSCParameterAssert(contentData);
     NSCParameterAssert(keyData);
     
-    NSString *hint = [NSString stringWithFormat:@"The key size of AES-%lu should be %lu bytes!", kKeySize * 8, kKeySize];
-    NSCAssert(keyData.length == kKeySize, hint);
-    return cipherOperation(contentData, keyData, kCCEncrypt,iv);
+//    NSString *hint = [NSString stringWithFormat:@"The key size of AES-%lu should be %lu bytes!", kKeySize * 8, kKeySize];
+//    NSCAssert(keyData.length == kKeySize, hint);
+    return [AESCipher cipherOperation:contentData :keyData :kCCEncrypt :iv ];
+//    return cipherOperation(contentData, keyData, kCCEncrypt,iv);
 }
 
-NSData * aesDecryptData(NSData *contentData, NSData *keyData,NSData *iv) {
++(NSData *) aesDecryptData:(NSData *)contentData : (NSData *)keyData :(NSData *)iv {
     NSCParameterAssert(contentData);
     NSCParameterAssert(keyData);
     
     NSString *hint = [NSString stringWithFormat:@"The key size of AES-%lu should be %lu bytes!", kKeySize * 8, kKeySize];
     NSCAssert(keyData.length == kKeySize, hint);
-    return cipherOperation(contentData, keyData, kCCDecrypt,iv);
+    return [AESCipher cipherOperation:contentData :keyData :kCCEncrypt :iv ];
+//    return cipherOperation(contentData, keyData, kCCDecrypt,iv);
 }
+
+@end

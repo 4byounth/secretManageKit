@@ -18,6 +18,7 @@
 #import <openssl/ripemd.h>
 #import <openssl/sha.h>
 #import "intTobyte.h"
+#import "Keysave.h"
 
 /*
  整数转字节
@@ -73,6 +74,10 @@ extern BOOL isUsedFirstTime;
             NSData *pubKey = [CBSecp256k1 generatePublicKeyWithPrivateKey:priData compression:YES];
             account = [self pubToAccount:pubKey];
             [self._delegate showAccount:account];
+            //保存信息
+            NSLog(@"开始保存信息");
+            [Keysave SaveKey:priData :pubKey :account :_field_pwd.text];
+            
             
             
             
