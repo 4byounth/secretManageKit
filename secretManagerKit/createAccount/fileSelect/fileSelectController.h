@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface fileSelectController : UITableViewController
 
+@property(copy,nonatomic)NSString *path;
+
+-(void) getFilePath;
+-(void) showFile;
 @end
 
 NS_ASSUME_NONNULL_END

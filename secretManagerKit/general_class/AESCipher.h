@@ -10,8 +10,8 @@
 
 #import <Foundation/Foundation.h>
 
-NSString * aesEncryptString(NSString *content, NSString *key);
-NSString * aesDecryptString(NSString *content, NSString *key);
+NSString * aesEncryptString(NSString *content, NSString *key,NSString *iv);
+NSString * aesDecryptString(NSString *content, NSString *key,NSString *iv);
 
-NSData * aesEncryptData(NSData *data, NSData *key);
-NSData * aesDecryptData(NSData *data, NSData *key);
+NSData * aesEncryptData(NSData *data, NSData *key,NSData *iv);
+NSData * aesDecryptData(NSData *data, NSData *key,NSData *iv);

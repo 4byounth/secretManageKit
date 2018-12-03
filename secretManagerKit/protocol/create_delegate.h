@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol create_delegate <NSObject>
 
+//显示账号
+-(void) showAccount:(NSString *)account;
+
 @end
 
 NS_ASSUME_NONNULL_END

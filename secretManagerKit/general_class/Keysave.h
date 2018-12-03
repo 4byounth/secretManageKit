@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Keysave : NSObject
 
++(Byte *)RandomIV;
 @end
 
 NS_ASSUME_NONNULL_END

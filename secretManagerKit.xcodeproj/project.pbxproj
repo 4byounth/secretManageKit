@@ -16,6 +16,15 @@
 		0436045E21ABEAEE008DFA44 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0436045D21ABEAEE008DFA44 /* main.m */; };
 		0436046821ABEAEE008DFA44 /* secretManagerKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0436046721ABEAEE008DFA44 /* secretManagerKitTests.m */; };
 		0436047321ABEAEE008DFA44 /* secretManagerKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0436047221ABEAEE008DFA44 /* secretManagerKitUITests.m */; };
+		0436048221ABEE56008DFA44 /* caculateSignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0436048121ABEE56008DFA44 /* caculateSignViewController.m */; };
+		0444D5D121B4C048004E6D30 /* AESCipher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0444D5D021B4C048004E6D30 /* AESCipher.m */; };
+		04B4D42521ACF47D00BDB498 /* secretManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B4D42421ACF47D00BDB498 /* secretManageViewController.m */; };
+		04B4D43021AD3C0C00BDB498 /* checkSigncontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B4D42F21AD3C0C00BDB498 /* checkSigncontroller.m */; };
+		04B4D43421AD3C7400BDB498 /* caculateFingerprintController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B4D43321AD3C7400BDB498 /* caculateFingerprintController.m */; };
+		04B4D43821AD3C9C00BDB498 /* versionInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B4D43721AD3C9C00BDB498 /* versionInfoController.m */; };
+		04B4D43E21AD3DC400BDB498 /* createAccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B4D43D21AD3DC400BDB498 /* createAccountController.m */; };
+		04FFB7F921B23D9B005F5701 /* Keysave.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB7F821B23D9B005F5701 /* Keysave.m */; };
+		2F2A2C69D24AB47877667EEF /* libPods-secretManagerKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 042A986321AD5945008EF564 /* libPods-secretManagerKit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02B12B92630F73EA2201A2FF /* libPods-secretManagerKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-secretManagerKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		042A986121AD5941008EF564 /* libHSEther.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libHSEther.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		042A986321AD5945008EF564 /* libPods-secretManagerKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-secretManagerKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0436044821ABEAEB008DFA44 /* secretManagerKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = secretManagerKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0436044B21ABEAEB008DFA44 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0436044C21ABEAEB008DFA44 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,6 +65,29 @@
 		0436046E21ABEAEE008DFA44 /* secretManagerKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = secretManagerKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0436047221ABEAEE008DFA44 /* secretManagerKitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = secretManagerKitUITests.m; sourceTree = "<group>"; };
 		0436047421ABEAEE008DFA44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0436048021ABEE56008DFA44 /* caculateSignViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = caculateSignViewController.h; sourceTree = "<group>"; };
+		0436048121ABEE56008DFA44 /* caculateSignViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = caculateSignViewController.m; sourceTree = "<group>"; };
+		0444D5CF21B4C03D004E6D30 /* AESCipher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESCipher.h; sourceTree = "<group>"; };
+		0444D5D021B4C048004E6D30 /* AESCipher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCipher.m; sourceTree = "<group>"; };
+		0444D5D321B4C185004E6D30 /* intTobyte.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = intTobyte.h; sourceTree = "<group>"; };
+		045B19FD21B1220100A81795 /* create_delegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = create_delegate.h; sourceTree = "<group>"; };
+		04B4D42321ACF47D00BDB498 /* secretManageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = secretManageViewController.h; sourceTree = "<group>"; };
+		04B4D42421ACF47D00BDB498 /* secretManageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = secretManageViewController.m; sourceTree = "<group>"; };
+		04B4D42E21AD3C0C00BDB498 /* checkSigncontroller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = checkSigncontroller.h; sourceTree = "<group>"; };
+		04B4D42F21AD3C0C00BDB498 /* checkSigncontroller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = checkSigncontroller.m; sourceTree = "<group>"; };
+		04B4D43221AD3C7400BDB498 /* caculateFingerprintController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = caculateFingerprintController.h; sourceTree = "<group>"; };
+		04B4D43321AD3C7400BDB498 /* caculateFingerprintController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = caculateFingerprintController.m; sourceTree = "<group>"; };
+		04B4D43621AD3C9C00BDB498 /* versionInfoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = versionInfoController.h; sourceTree = "<group>"; };
+		04B4D43721AD3C9C00BDB498 /* versionInfoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = versionInfoController.m; sourceTree = "<group>"; };
+		04B4D43C21AD3DC400BDB498 /* createAccountController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = createAccountController.h; sourceTree = "<group>"; };
+		04B4D43D21AD3DC400BDB498 /* createAccountController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = createAccountController.m; sourceTree = "<group>"; };
+		04B4D43F21AD467900BDB498 /* libHSEther.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libHSEther.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		04B4D46B21AD4A8900BDB498 /* hsether.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = hsether.a; path = Pods/HSEther/HSEther/hsether.a; sourceTree = "<group>"; };
+		04B4D4A321AD517C00BDB498 /* libHSEther.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libHSEther.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		04FFB7F721B23D9B005F5701 /* Keysave.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Keysave.h; sourceTree = "<group>"; };
+		04FFB7F821B23D9B005F5701 /* Keysave.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Keysave.m; sourceTree = "<group>"; };
+		52860F7167674CE6933B4376 /* Pods-secretManagerKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-secretManagerKit.debug.xcconfig"; path = "Target Support Files/Pods-secretManagerKit/Pods-secretManagerKit.debug.xcconfig"; sourceTree = "<group>"; };
+		B805594E42CD0EBB6830880E /* Pods-secretManagerKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-secretManagerKit.release.xcconfig"; path = "Target Support Files/Pods-secretManagerKit/Pods-secretManagerKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F2A2C69D24AB47877667EEF /* libPods-secretManagerKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +123,8 @@
 				0436046621ABEAEE008DFA44 /* secretManagerKitTests */,
 				0436047121ABEAEE008DFA44 /* secretManagerKitUITests */,
 				0436044921ABEAEB008DFA44 /* Products */,
+				9A482AF82D2777375374CEC3 /* Frameworks */,
+				6414896766F349527B83561C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,13 +141,19 @@
 		0436044A21ABEAEB008DFA44 /* secretManagerKit */ = {
 			isa = PBXGroup;
 			children = (
-				0436044B21ABEAEB008DFA44 /* AppDelegate.h */,
-				0436044C21ABEAEB008DFA44 /* AppDelegate.m */,
-				0436044E21ABEAEB008DFA44 /* ViewController.h */,
-				0436044F21ABEAEB008DFA44 /* ViewController.m */,
-				0436045121ABEAEB008DFA44 /* Main.storyboard */,
+				04FFB7F621B23D42005F5701 /* general_class */,
+				045B19FB21B121B100A81795 /* protocol */,
+				045B19F921B11E4B00A81795 /* my_c */,
+				04B4D43B21AD3DA600BDB498 /* createAccount */,
+				04B4D43A21AD3CDE00BDB498 /* storyboard */,
+				04B4D43921AD3CB300BDB498 /* AppDelegate */,
+				04B4D43521AD3C7D00BDB498 /* versionInfo */,
+				04B4D43121AD3C2000BDB498 /* caculateFingerprint */,
+				04B4D42D21AD3BD000BDB498 /* checkSign */,
+				04B4D42C21AD3BB400BDB498 /* caculatesign */,
+				04B4D42B21AD3BA300BDB498 /* home */,
+				04B4D42A21AD3B8400BDB498 /* secretManage */,
 				0436045721ABEAEE008DFA44 /* Assets.xcassets */,
-				0436045921ABEAEE008DFA44 /* LaunchScreen.storyboard */,
 				0436045C21ABEAEE008DFA44 /* Info.plist */,
 				0436045D21ABEAEE008DFA44 /* main.m */,
 				0436045421ABEAEB008DFA44 /* secretManagerKit.xcdatamodeld */,
@@ -135,6 +179,136 @@
 			path = secretManagerKitUITests;
 			sourceTree = "<group>";
 		};
+		045B19F921B11E4B00A81795 /* my_c */ = {
+			isa = PBXGroup;
+			children = (
+				0444D5D321B4C185004E6D30 /* intTobyte.h */,
+			);
+			path = my_c;
+			sourceTree = "<group>";
+		};
+		045B19FB21B121B100A81795 /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				045B19FD21B1220100A81795 /* create_delegate.h */,
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
+		04B4D42A21AD3B8400BDB498 /* secretManage */ = {
+			isa = PBXGroup;
+			children = (
+				04B4D42321ACF47D00BDB498 /* secretManageViewController.h */,
+				04B4D42421ACF47D00BDB498 /* secretManageViewController.m */,
+			);
+			path = secretManage;
+			sourceTree = "<group>";
+		};
+		04B4D42B21AD3BA300BDB498 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				0436044E21ABEAEB008DFA44 /* ViewController.h */,
+				0436044F21ABEAEB008DFA44 /* ViewController.m */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		04B4D42C21AD3BB400BDB498 /* caculatesign */ = {
+			isa = PBXGroup;
+			children = (
+				0436048021ABEE56008DFA44 /* caculateSignViewController.h */,
+				0436048121ABEE56008DFA44 /* caculateSignViewController.m */,
+			);
+			path = caculatesign;
+			sourceTree = "<group>";
+		};
+		04B4D42D21AD3BD000BDB498 /* checkSign */ = {
+			isa = PBXGroup;
+			children = (
+				04B4D42E21AD3C0C00BDB498 /* checkSigncontroller.h */,
+				04B4D42F21AD3C0C00BDB498 /* checkSigncontroller.m */,
+			);
+			path = checkSign;
+			sourceTree = "<group>";
+		};
+		04B4D43121AD3C2000BDB498 /* caculateFingerprint */ = {
+			isa = PBXGroup;
+			children = (
+				04B4D43221AD3C7400BDB498 /* caculateFingerprintController.h */,
+				04B4D43321AD3C7400BDB498 /* caculateFingerprintController.m */,
+			);
+			path = caculateFingerprint;
+			sourceTree = "<group>";
+		};
+		04B4D43521AD3C7D00BDB498 /* versionInfo */ = {
+			isa = PBXGroup;
+			children = (
+				04B4D43621AD3C9C00BDB498 /* versionInfoController.h */,
+				04B4D43721AD3C9C00BDB498 /* versionInfoController.m */,
+			);
+			path = versionInfo;
+			sourceTree = "<group>";
+		};
+		04B4D43921AD3CB300BDB498 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				0436044B21ABEAEB008DFA44 /* AppDelegate.h */,
+				0436044C21ABEAEB008DFA44 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		04B4D43A21AD3CDE00BDB498 /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				0436045121ABEAEB008DFA44 /* Main.storyboard */,
+				0436045921ABEAEE008DFA44 /* LaunchScreen.storyboard */,
+			);
+			path = storyboard;
+			sourceTree = "<group>";
+		};
+		04B4D43B21AD3DA600BDB498 /* createAccount */ = {
+			isa = PBXGroup;
+			children = (
+				04B4D43C21AD3DC400BDB498 /* createAccountController.h */,
+				04B4D43D21AD3DC400BDB498 /* createAccountController.m */,
+			);
+			path = createAccount;
+			sourceTree = "<group>";
+		};
+		04FFB7F621B23D42005F5701 /* general_class */ = {
+			isa = PBXGroup;
+			children = (
+				04FFB7F721B23D9B005F5701 /* Keysave.h */,
+				04FFB7F821B23D9B005F5701 /* Keysave.m */,
+				0444D5CF21B4C03D004E6D30 /* AESCipher.h */,
+				0444D5D021B4C048004E6D30 /* AESCipher.m */,
+			);
+			path = general_class;
+			sourceTree = "<group>";
+		};
+		6414896766F349527B83561C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52860F7167674CE6933B4376 /* Pods-secretManagerKit.debug.xcconfig */,
+				B805594E42CD0EBB6830880E /* Pods-secretManagerKit.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9A482AF82D2777375374CEC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				042A986321AD5945008EF564 /* libPods-secretManagerKit.a */,
+				042A986121AD5941008EF564 /* libHSEther.a */,
+				04B4D4A321AD517C00BDB498 /* libHSEther.a */,
+				04B4D46B21AD4A8900BDB498 /* hsether.a */,
+				04B4D43F21AD467900BDB498 /* libHSEther.a */,
+				02B12B92630F73EA2201A2FF /* libPods-secretManagerKit.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,6 +316,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0436047721ABEAEE008DFA44 /* Build configuration list for PBXNativeTarget "secretManagerKit" */;
 			buildPhases = (
+				21E9B97A2B15848499B461A0 /* [CP] Check Pods Manifest.lock */,
 				0436044421ABEAEB008DFA44 /* Sources */,
 				0436044521ABEAEB008DFA44 /* Frameworks */,
 				0436044621ABEAEB008DFA44 /* Resources */,
@@ -260,15 +435,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		21E9B97A2B15848499B461A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-secretManagerKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0436044421ABEAEB008DFA44 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B4D43821AD3C9C00BDB498 /* versionInfoController.m in Sources */,
+				04B4D43E21AD3DC400BDB498 /* createAccountController.m in Sources */,
 				0436045021ABEAEB008DFA44 /* ViewController.m in Sources */,
 				0436044D21ABEAEB008DFA44 /* AppDelegate.m in Sources */,
 				0436045E21ABEAEE008DFA44 /* main.m in Sources */,
+				04B4D43021AD3C0C00BDB498 /* checkSigncontroller.m in Sources */,
+				0444D5D121B4C048004E6D30 /* AESCipher.m in Sources */,
 				0436045621ABEAEB008DFA44 /* secretManagerKit.xcdatamodeld in Sources */,
+				0436048221ABEE56008DFA44 /* caculateSignViewController.m in Sources */,
+				04FFB7F921B23D9B005F5701 /* Keysave.m in Sources */,
+				04B4D43421AD3C7400BDB498 /* caculateFingerprintController.m in Sources */,
+				04B4D42521ACF47D00BDB498 /* secretManageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,14 +645,24 @@
 		};
 		0436047821ABEAEE008DFA44 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52860F7167674CE6933B4376 /* Pods-secretManagerKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KN8F3LDN26;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = secretManagerKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HSEther/libEther",
+					"$(PROJECT_DIR)/Pods/HSEther/HSEther",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = XL.secretManagerKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -454,14 +672,24 @@
 		};
 		0436047921ABEAEE008DFA44 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B805594E42CD0EBB6830880E /* Pods-secretManagerKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KN8F3LDN26;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = secretManagerKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HSEther/libEther",
+					"$(PROJECT_DIR)/Pods/HSEther/HSEther",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = XL.secretManagerKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";

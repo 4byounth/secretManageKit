@@ -14,7 +14,7 @@
 NSString const *kInitVector = @"A-16-Byte-String";
 size_t const kKeySize = kCCKeySizeAES128;
 
-NSData * cipherOperation(NSData *contentData, NSData *keyData, CCOperation operation) {
+NSData * cipherOperation(NSData *contentData, NSData *keyData, CCOperation operation,NSData *iv) {
     NSUInteger dataLength = contentData.length;
     
     void const *initVectorBytes = [kInitVector dataUsingEncoding:NSUTF8StringEncoding].bytes;
@@ -33,7 +33,7 @@ NSData * cipherOperation(NSData *contentData, NSData *keyData, CCOperation opera
                                           kCCOptionPKCS7Padding,
                                           keyBytes,
                                           kKeySize,
-                                          initVectorBytes,
+                                          iv.bytes,
                                           contentBytes,
                                           dataLength,
                                           operationBytes,
@@ -48,40 +48,42 @@ NSData * cipherOperation(NSData *contentData, NSData *keyData, CCOperation opera
     return nil;
 }
 
-NSString * aesEncryptString(NSString *content, NSString *key) {
+NSString * aesEncryptString(NSString *content, NSString *key,NSString *iv) {
     NSCParameterAssert(content);
     NSCParameterAssert(key);
     
+    NSData *iv_data = [iv dataUsingEncoding:NSUTF8StringEncoding].bytes;
     NSData *contentData = [content dataUsingEncoding:NSUTF8StringEncoding];
     NSData *keyData = [key dataUsingEncoding:NSUTF8StringEncoding];
-    NSData *encrptedData = aesEncryptData(contentData, keyData);
+    NSData *encrptedData = aesEncryptData(contentData, keyData, iv_data);
     return [encrptedData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
 }
 
-NSString * aesDecryptString(NSString *content, NSString *key) {
+NSString * aesDecryptString(NSString *content, NSString *key,NSString *iv) {
     NSCParameterAssert(content);
     NSCParameterAssert(key);
     
+    NSData *iv_data = [iv dataUsingEncoding:NSUTF8StringEncoding].bytes;
     NSData *contentData = [[NSData alloc] initWithBase64EncodedString:content options:NSDataBase64DecodingIgnoreUnknownCharacters];
     NSData *keyData = [key dataUsingEncoding:NSUTF8StringEncoding];
-    NSData *decryptedData = aesDecryptData(contentData, keyData);
+    NSData *decryptedData = aesDecryptData(contentData, keyData,iv_data);
     return [[NSString alloc] initWithData:decryptedData encoding:NSUTF8StringEncoding];
 }
 
-NSData * aesEncryptData(NSData *contentData, NSData *keyData) {
+NSData * aesEncryptData(NSData *contentData, NSData *keyData,NSData *iv) {
     NSCParameterAssert(contentData);
     NSCParameterAssert(keyData);
     
     NSString *hint = [NSString stringWithFormat:@"The key size of AES-%lu should be %lu bytes!", kKeySize * 8, kKeySize];
     NSCAssert(keyData.length == kKeySize, hint);
-    return cipherOperation(contentData, keyData, kCCEncrypt);
+    return cipherOperation(contentData, keyData, kCCEncrypt,iv);
 }
 
-NSData * aesDecryptData(NSData *contentData, NSData *keyData) {
+NSData * aesDecryptData(NSData *contentData, NSData *keyData,NSData *iv) {
     NSCParameterAssert(contentData);
     NSCParameterAssert(keyData);
     
     NSString *hint = [NSString stringWithFormat:@"The key size of AES-%lu should be %lu bytes!", kKeySize * 8, kKeySize];
     NSCAssert(keyData.length == kKeySize, hint);
-    return cipherOperation(contentData, keyData, kCCDecrypt);
+    return cipherOperation(contentData, keyData, kCCDecrypt,iv);
 }
