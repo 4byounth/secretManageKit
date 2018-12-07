@@ -11,11 +11,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 extern NSString *CIPHER;
-@interface AESCipher : NSObject{
+
+@interface AESCipher:NSObject{
     
 }
-
-
 +(NSData *) cipherOperation:(NSData *)contentData :(NSData *)keyData :(CCOperation) operation :(NSData *)iv;
 +(NSString *) aesEncryptString:(NSString *)content :(NSString *)key :(NSString *)iv;
 

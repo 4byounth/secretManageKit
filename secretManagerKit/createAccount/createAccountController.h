@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CommonCrypto/CommonDigest.h>
-#import <CommonCrypto/CommonHMAC.h>
 #import "create_delegate.h"
 
 
@@ -34,6 +32,8 @@ static int LEN_ACCOUNT = 25;
 - (IBAction)click_import_account:(id)sender;
 - (IBAction)cancelSelect:(UIStoryboardSegue*) segue;
 - (IBAction)selectFile:(UIStoryboardSegue*) segue;
+
++(NSString *)pubToAccount:(NSData *)pub;//
 @end
 
 NS_ASSUME_NONNULL_END

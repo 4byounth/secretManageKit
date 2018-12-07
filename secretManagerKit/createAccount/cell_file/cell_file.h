@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "fileSelectController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,8 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *label_date;
 @property (weak, nonatomic) IBOutlet UIButton *btn_next;
 - (IBAction)click_next:(id)sender;
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
-
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(nullable NSString *)reuseIdentifier;
+- (void)fillData:(fileProperty *)property;
 @end
 
 NS_ASSUME_NONNULL_END

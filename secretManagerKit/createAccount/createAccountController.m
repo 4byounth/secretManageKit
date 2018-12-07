@@ -7,18 +7,27 @@
 //
 
 #import "createAccountController.h"
+#import <CommonCrypto/CommonDigest.h>
+#import <CommonCrypto/CommonHMAC.h>
 #import <CBSecp256k1.h>
 #import <NSData+HexString.h>
-#import <CommonCrypto/CommonDigest.h>
 #import "NSData+Hashing.h"
 #import <CBBase58/BTCBase58.h>
 #import <CBBase58/NS+BTCBase58.h>
+#import <BCGenerator.h>
+#import <BTCKey.h>
+#import <NSData+HexString.h>
+#import <BTCBase58.h>
+#import <NS+BTCBase58.h>
 
 #import <openssl/hmac.h>
 #import <openssl/ripemd.h>
 #import <openssl/sha.h>
 #import "intTobyte.h"
 #import "Keysave.h"
+#import "sign_class.h"
+#import "fileSelect/fileSelectController.h"
+
 
 /*
  整数转字节
@@ -36,14 +45,18 @@ Byte* intmax_tToBytes(intmax_t num){
 
 @end
 
-extern NSString *account;
-extern BOOL isUsedFirstTime;
+//NSString *account;
+//BOOL isUsedFirstTime;
 
 
 @implementation createAccountController
 
+@synthesize _delegate = delegate;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    
     // Do any additional setup after loading the view.
 }
 
@@ -71,15 +84,22 @@ extern BOOL isUsedFirstTime;
             //密码验证通过之后的处理代码
             //调用账号生成函数,生成账号
             NSData *priData = [[NSData alloc] initWithBytesNoCopy:[self getPriKey] length:32];
+//            NSData *priData = [NSData hexStringToData:@"b774e289f9fbc80d7197f40539bae7d8f16e533d20da2d250f606d5987efcc4f"];
+            BTCKey *btckey = [[BTCKey alloc] initWithPrivateKey:priData];
+            btckey.publicKeyCompressed = YES;
             NSData *pubKey = [CBSecp256k1 generatePublicKeyWithPrivateKey:priData compression:YES];
-            account = [self pubToAccount:pubKey];
+            extern NSString *account;
+            extern NSString *password;
+            account = [createAccountController pubToAccount:pubKey];
+            password = _field_pwd.text;
+            [NSUserDefaults.standardUserDefaults setValue:account forKey:@"account"];
             [self._delegate showAccount:account];
             //保存信息
+            
+            [NSUserDefaults.standardUserDefaults setValue:account forKey:@"account"];//将账号信息存储到本地
+            [NSUserDefaults.standardUserDefaults setValue:password forKey:@"password"];
             NSLog(@"开始保存信息");
             [Keysave SaveKey:priData :pubKey :account :_field_pwd.text];
-            
-            
-            
             
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:@"成功生成账号" preferredStyle:UIAlertControllerStyleAlert];
             [self presentViewController:alert animated:true completion:^{
@@ -87,6 +107,8 @@ extern BOOL isUsedFirstTime;
                     [self dismissViewControllerAnimated:YES completion:nil];
                 });
             }];
+            
+            
         }
     }
     else{
@@ -108,21 +130,39 @@ extern BOOL isUsedFirstTime;
     
 }
 - (IBAction)selectFile:(UIStoryboardSegue*) segue{
+    id ID = segue.sourceViewController;
+    if ([ID isKindOfClass:fileSelectController.class]) {
+        fileSelectController *vcSel = ID;
+        NSFileManager *fm = [NSFileManager defaultManager];
+        BOOL isDir = NO;
+        [fm fileExistsAtPath:vcSel.current_path isDirectory:&isDir];
+        if(isDir){
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:@"你选择的是一个目录，请选择具体的文件" preferredStyle:UIAlertControllerStyleAlert];
+            [self presentViewController:alert animated:true completion:^{
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1.0), dispatch_get_main_queue(), ^{
+                    [self dismissViewControllerAnimated:YES completion:nil];
+                });
+            }];
+        }
+    }
+    else{
+        [self dismissViewControllerAnimated:true completion:nil];
+    }
     
-    [self dismissViewControllerAnimated:true completion:nil];
 }
 
 //获取私钥
 -(Byte *) getPriKey{
     Byte *pri = (Byte *)malloc(LEN_PRIKEY);
-    srand((unsigned int)NSTimeIntervalSince1970*100);
+    srand((unsigned int)NSTimeIntervalSince1970*1000);
     long rand = random();
+//    long rand = 132032465123;
     pri = intmax_tToBytes(rand);
     return pri;
 }
 
 //通过公钥生成账号
--(NSString *)pubToAccount:(NSData *)pub{
++(NSString *)pubToAccount:(NSData *)pub{
     SHA_CTX ctx1;
     SHA256_CTX ctx256;
     SHA1_Init(&ctx1);

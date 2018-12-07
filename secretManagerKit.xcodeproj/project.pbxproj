@@ -17,13 +17,19 @@
 		0436046821ABEAEE008DFA44 /* secretManagerKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0436046721ABEAEE008DFA44 /* secretManagerKitTests.m */; };
 		0436047321ABEAEE008DFA44 /* secretManagerKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0436047221ABEAEE008DFA44 /* secretManagerKitUITests.m */; };
 		0436048221ABEE56008DFA44 /* caculateSignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0436048121ABEE56008DFA44 /* caculateSignViewController.m */; };
-		0444D5DA21B514EC004E6D30 /* AESCipher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0444D5D921B514EC004E6D30 /* AESCipher.m */; };
 		0444D5DB21B51937004E6D30 /* Keysave.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FFB7F821B23D9B005F5701 /* Keysave.m */; };
+		0463B72C21B7C984001311F5 /* AESCipher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0463B72B21B7C984001311F5 /* AESCipher.m */; };
+		04A5C08F21B8FFAB00EBD2B2 /* cell_file.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A5C08D21B8FFAB00EBD2B2 /* cell_file.m */; };
+		04A5C09021B8FFAB00EBD2B2 /* cell_file.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A5C08E21B8FFAB00EBD2B2 /* cell_file.xib */; };
+		04A5C09421B8FFB400EBD2B2 /* fileSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A5C09321B8FFB400EBD2B2 /* fileSelectController.m */; };
+		04A5C09721B917C800EBD2B2 /* fileProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A5C09621B917C800EBD2B2 /* fileProperty.m */; };
 		04B4D42521ACF47D00BDB498 /* secretManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B4D42421ACF47D00BDB498 /* secretManageViewController.m */; };
 		04B4D43021AD3C0C00BDB498 /* checkSigncontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B4D42F21AD3C0C00BDB498 /* checkSigncontroller.m */; };
 		04B4D43421AD3C7400BDB498 /* caculateFingerprintController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B4D43321AD3C7400BDB498 /* caculateFingerprintController.m */; };
 		04B4D43821AD3C9C00BDB498 /* versionInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B4D43721AD3C9C00BDB498 /* versionInfoController.m */; };
 		04B4D43E21AD3DC400BDB498 /* createAccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B4D43D21AD3DC400BDB498 /* createAccountController.m */; };
+		04F90C5A21B6530B004E8C03 /* global.h in Sources */ = {isa = PBXBuildFile; fileRef = 04F90C3421B61BE5004E8C03 /* global.h */; };
+		04F90C5D21B6666B004E8C03 /* sign_class.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F90C5C21B6666B004E8C03 /* sign_class.m */; };
 		2F2A2C69D24AB47877667EEF /* libPods-secretManagerKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 042A986321AD5945008EF564 /* libPods-secretManagerKit.a */; };
 /* End PBXBuildFile section */
 
@@ -68,9 +74,16 @@
 		0436048021ABEE56008DFA44 /* caculateSignViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = caculateSignViewController.h; sourceTree = "<group>"; };
 		0436048121ABEE56008DFA44 /* caculateSignViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = caculateSignViewController.m; sourceTree = "<group>"; };
 		0444D5D321B4C185004E6D30 /* intTobyte.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = intTobyte.h; sourceTree = "<group>"; };
-		0444D5D821B514EC004E6D30 /* AESCipher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESCipher.h; sourceTree = "<group>"; };
-		0444D5D921B514EC004E6D30 /* AESCipher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESCipher.m; sourceTree = "<group>"; };
 		045B19FD21B1220100A81795 /* create_delegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = create_delegate.h; sourceTree = "<group>"; };
+		0463B72A21B7C973001311F5 /* AESCipher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AESCipher.h; path = "../../../../Downloads/AESCipher-iOS-master/AESCipher/AESCipher/AESCipher/AESCipher.h"; sourceTree = "<group>"; };
+		0463B72B21B7C984001311F5 /* AESCipher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AESCipher.m; path = "../../../../Downloads/AESCipher-iOS-master/AESCipher/AESCipher/AESCipher/AESCipher.m"; sourceTree = "<group>"; };
+		04A5C08C21B8FFAB00EBD2B2 /* cell_file.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cell_file.h; sourceTree = "<group>"; };
+		04A5C08D21B8FFAB00EBD2B2 /* cell_file.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cell_file.m; sourceTree = "<group>"; };
+		04A5C08E21B8FFAB00EBD2B2 /* cell_file.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cell_file.xib; sourceTree = "<group>"; };
+		04A5C09221B8FFB400EBD2B2 /* fileSelectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fileSelectController.h; sourceTree = "<group>"; };
+		04A5C09321B8FFB400EBD2B2 /* fileSelectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fileSelectController.m; sourceTree = "<group>"; };
+		04A5C09521B917C800EBD2B2 /* fileProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fileProperty.h; sourceTree = "<group>"; };
+		04A5C09621B917C800EBD2B2 /* fileProperty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fileProperty.m; sourceTree = "<group>"; };
 		04B4D42321ACF47D00BDB498 /* secretManageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = secretManageViewController.h; sourceTree = "<group>"; };
 		04B4D42421ACF47D00BDB498 /* secretManageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = secretManageViewController.m; sourceTree = "<group>"; };
 		04B4D42E21AD3C0C00BDB498 /* checkSigncontroller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = checkSigncontroller.h; sourceTree = "<group>"; };
@@ -84,10 +97,13 @@
 		04B4D43F21AD467900BDB498 /* libHSEther.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libHSEther.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B4D46B21AD4A8900BDB498 /* hsether.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = hsether.a; path = Pods/HSEther/HSEther/hsether.a; sourceTree = "<group>"; };
 		04B4D4A321AD517C00BDB498 /* libHSEther.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libHSEther.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		04F90C3421B61BE5004E8C03 /* global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = global.h; sourceTree = "<group>"; };
+		04F90C5B21B6666B004E8C03 /* sign_class.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sign_class.h; sourceTree = "<group>"; };
+		04F90C5C21B6666B004E8C03 /* sign_class.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sign_class.m; sourceTree = "<group>"; };
 		04FFB7F721B23D9B005F5701 /* Keysave.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Keysave.h; sourceTree = "<group>"; };
 		04FFB7F821B23D9B005F5701 /* Keysave.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Keysave.m; sourceTree = "<group>"; };
-		52860F7167674CE6933B4376 /* Pods-secretManagerKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-secretManagerKit.debug.xcconfig"; path = "Target Support Files/Pods-secretManagerKit/Pods-secretManagerKit.debug.xcconfig"; sourceTree = "<group>"; };
-		B805594E42CD0EBB6830880E /* Pods-secretManagerKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-secretManagerKit.release.xcconfig"; path = "Target Support Files/Pods-secretManagerKit/Pods-secretManagerKit.release.xcconfig"; sourceTree = "<group>"; };
+		536A7188E303DCF81BA8AC3A /* Pods-secretManagerKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-secretManagerKit.debug.xcconfig"; path = "Target Support Files/Pods-secretManagerKit/Pods-secretManagerKit.debug.xcconfig"; sourceTree = "<group>"; };
+		C1ED838EDF078F05A9CFFA9E /* Pods-secretManagerKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-secretManagerKit.release.xcconfig"; path = "Target Support Files/Pods-secretManagerKit/Pods-secretManagerKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +140,7 @@
 				0436047121ABEAEE008DFA44 /* secretManagerKitUITests */,
 				0436044921ABEAEB008DFA44 /* Products */,
 				9A482AF82D2777375374CEC3 /* Frameworks */,
-				6414896766F349527B83561C /* Pods */,
+				943FCDBCA996054806DB7C31 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,14 +161,14 @@
 				04FFB7F621B23D42005F5701 /* general_class */,
 				045B19FB21B121B100A81795 /* protocol */,
 				045B19F921B11E4B00A81795 /* my_c */,
-				04B4D43B21AD3DA600BDB498 /* createAccount */,
 				04B4D43A21AD3CDE00BDB498 /* storyboard */,
 				04B4D43921AD3CB300BDB498 /* AppDelegate */,
 				04B4D43521AD3C7D00BDB498 /* versionInfo */,
-				04B4D43121AD3C2000BDB498 /* caculateFingerprint */,
-				04B4D42D21AD3BD000BDB498 /* checkSign */,
-				04B4D42C21AD3BB400BDB498 /* caculatesign */,
 				04B4D42B21AD3BA300BDB498 /* home */,
+				04B4D43B21AD3DA600BDB498 /* createAccount */,
+				04B4D42C21AD3BB400BDB498 /* caculatesign */,
+				04B4D42D21AD3BD000BDB498 /* checkSign */,
+				04B4D43121AD3C2000BDB498 /* caculateFingerprint */,
 				04B4D42A21AD3B8400BDB498 /* secretManage */,
 				0436045721ABEAEE008DFA44 /* Assets.xcassets */,
 				0436045C21ABEAEE008DFA44 /* Info.plist */,
@@ -183,8 +199,6 @@
 		0444D5D721B514CB004E6D30 /* AES */ = {
 			isa = PBXGroup;
 			children = (
-				0444D5D821B514EC004E6D30 /* AESCipher.h */,
-				0444D5D921B514EC004E6D30 /* AESCipher.m */,
 			);
 			path = AES;
 			sourceTree = "<group>";
@@ -203,6 +217,27 @@
 				045B19FD21B1220100A81795 /* create_delegate.h */,
 			);
 			path = protocol;
+			sourceTree = "<group>";
+		};
+		04A5C08B21B8FFAB00EBD2B2 /* cell_file */ = {
+			isa = PBXGroup;
+			children = (
+				04A5C08C21B8FFAB00EBD2B2 /* cell_file.h */,
+				04A5C08D21B8FFAB00EBD2B2 /* cell_file.m */,
+				04A5C08E21B8FFAB00EBD2B2 /* cell_file.xib */,
+			);
+			path = cell_file;
+			sourceTree = "<group>";
+		};
+		04A5C09121B8FFB400EBD2B2 /* fileSelect */ = {
+			isa = PBXGroup;
+			children = (
+				04A5C09221B8FFB400EBD2B2 /* fileSelectController.h */,
+				04A5C09321B8FFB400EBD2B2 /* fileSelectController.m */,
+				04A5C09521B917C800EBD2B2 /* fileProperty.h */,
+				04A5C09621B917C800EBD2B2 /* fileProperty.m */,
+			);
+			path = fileSelect;
 			sourceTree = "<group>";
 		};
 		04B4D42A21AD3B8400BDB498 /* secretManage */ = {
@@ -280,6 +315,8 @@
 		04B4D43B21AD3DA600BDB498 /* createAccount */ = {
 			isa = PBXGroup;
 			children = (
+				04A5C09121B8FFB400EBD2B2 /* fileSelect */,
+				04A5C08B21B8FFAB00EBD2B2 /* cell_file */,
 				04B4D43C21AD3DC400BDB498 /* createAccountController.h */,
 				04B4D43D21AD3DC400BDB498 /* createAccountController.m */,
 			);
@@ -289,17 +326,22 @@
 		04FFB7F621B23D42005F5701 /* general_class */ = {
 			isa = PBXGroup;
 			children = (
+				0463B72A21B7C973001311F5 /* AESCipher.h */,
+				0463B72B21B7C984001311F5 /* AESCipher.m */,
 				04FFB7F721B23D9B005F5701 /* Keysave.h */,
 				04FFB7F821B23D9B005F5701 /* Keysave.m */,
+				04F90C3421B61BE5004E8C03 /* global.h */,
+				04F90C5B21B6666B004E8C03 /* sign_class.h */,
+				04F90C5C21B6666B004E8C03 /* sign_class.m */,
 			);
 			path = general_class;
 			sourceTree = "<group>";
 		};
-		6414896766F349527B83561C /* Pods */ = {
+		943FCDBCA996054806DB7C31 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				52860F7167674CE6933B4376 /* Pods-secretManagerKit.debug.xcconfig */,
-				B805594E42CD0EBB6830880E /* Pods-secretManagerKit.release.xcconfig */,
+				536A7188E303DCF81BA8AC3A /* Pods-secretManagerKit.debug.xcconfig */,
+				C1ED838EDF078F05A9CFFA9E /* Pods-secretManagerKit.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -422,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0436045B21ABEAEE008DFA44 /* LaunchScreen.storyboard in Resources */,
+				04A5C09021B8FFAB00EBD2B2 /* cell_file.xib in Resources */,
 				0436045821ABEAEE008DFA44 /* Assets.xcassets in Resources */,
 				0436045321ABEAEB008DFA44 /* Main.storyboard in Resources */,
 			);
@@ -473,18 +516,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F90C5A21B6530B004E8C03 /* global.h in Sources */,
 				0444D5DB21B51937004E6D30 /* Keysave.m in Sources */,
 				04B4D43821AD3C9C00BDB498 /* versionInfoController.m in Sources */,
 				04B4D43E21AD3DC400BDB498 /* createAccountController.m in Sources */,
 				0436045021ABEAEB008DFA44 /* ViewController.m in Sources */,
+				04A5C09421B8FFB400EBD2B2 /* fileSelectController.m in Sources */,
+				04A5C08F21B8FFAB00EBD2B2 /* cell_file.m in Sources */,
 				0436044D21ABEAEB008DFA44 /* AppDelegate.m in Sources */,
+				04A5C09721B917C800EBD2B2 /* fileProperty.m in Sources */,
 				0436045E21ABEAEE008DFA44 /* main.m in Sources */,
-				0444D5DA21B514EC004E6D30 /* AESCipher.m in Sources */,
 				04B4D43021AD3C0C00BDB498 /* checkSigncontroller.m in Sources */,
 				0436045621ABEAEB008DFA44 /* secretManagerKit.xcdatamodeld in Sources */,
 				0436048221ABEE56008DFA44 /* caculateSignViewController.m in Sources */,
+				0463B72C21B7C984001311F5 /* AESCipher.m in Sources */,
 				04B4D43421AD3C7400BDB498 /* caculateFingerprintController.m in Sources */,
 				04B4D42521ACF47D00BDB498 /* secretManageViewController.m in Sources */,
+				04F90C5D21B6666B004E8C03 /* sign_class.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,16 +701,27 @@
 		};
 		0436047821ABEAEE008DFA44 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 52860F7167674CE6933B4376 /* Pods-secretManagerKit.debug.xcconfig */;
+			baseConfigurationReference = 536A7188E303DCF81BA8AC3A /* Pods-secretManagerKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KN8F3LDN26;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/BCGenerator\"",
+					"\"${PODS_ROOT}/Headers/Public/CBBase58\"",
+					"\"${PODS_ROOT}/Headers/Public/CBSecp256k1\"",
+					"\"${PODS_ROOT}/Headers/Public/OpenSSL-Universal\"",
+				);
 				INFOPLIST_FILE = secretManagerKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -674,22 +733,34 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = XL.secretManagerKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		0436047921ABEAEE008DFA44 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B805594E42CD0EBB6830880E /* Pods-secretManagerKit.release.xcconfig */;
+			baseConfigurationReference = C1ED838EDF078F05A9CFFA9E /* Pods-secretManagerKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KN8F3LDN26;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/BCGenerator\"",
+					"\"${PODS_ROOT}/Headers/Public/CBBase58\"",
+					"\"${PODS_ROOT}/Headers/Public/CBSecp256k1\"",
+					"\"${PODS_ROOT}/Headers/Public/OpenSSL-Universal\"",
+				);
 				INFOPLIST_FILE = secretManagerKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -701,6 +772,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = XL.secretManagerKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

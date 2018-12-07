@@ -7,15 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "fileProperty.h"
+
+
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface fileSelectController : UITableViewController
+@interface fileSelectController : UITableViewController{
+    NSFileManager *_fileManager;
+    NSArray<fileProperty *> *_fileArray;
+}
 
-@property(copy,nonatomic)NSString *path;
+@property(copy,nonatomic)NSString *current_path;
+@property(copy,nonatomic)NSArray *fileArray;
+@property(strong,nonatomic)NSFileManager *fileManager;
 
--(void) getFilePath;
--(void) showFile;
+
+-(void)setData:(NSString *)path;
 @end
 
 NS_ASSUME_NONNULL_END

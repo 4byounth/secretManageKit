@@ -22,4 +22,11 @@
 
 - (IBAction)click_next:(id)sender {
 }
+
+-(void)fillData:(fileProperty *)property{
+    self.label_file_name.text = property.fileName;
+    self.label_size.text = property.fileSize;
+    self.label_date.text = property.createDate;
+    self.label_size.text = [property.fileSize stringByAppendingString:@" B"] ;
+}
 @end

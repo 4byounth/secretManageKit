@@ -48,6 +48,40 @@
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
 }
+-(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths lastObject];
+    if (url != nil) {
+        NSString *path = [url absoluteString];
+        path = [path stringByRemovingPercentEncoding];
+        NSMutableString *string = [[NSMutableString alloc] initWithString:path];
+        if ([path hasPrefix:@"file:///private"]) {
+            [string replaceOccurrencesOfString:@"file:///private" withString:@"" options:NSCaseInsensitiveSearch  range:NSMakeRange(0, path.length)];
+        }
+        NSArray *tempArray = [string componentsSeparatedByString:@"/"];
+        NSString *fileName = tempArray.lastObject;
+//        NSString *sourceName = options[@"UIApplicationOpenURLOptionsSourceApplicationKey"];
+        
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        NSString *filePath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@",fileName]];
+        if ([fileManager fileExistsAtPath:filePath]) {
+            NSLog(@"文件已存在");
+//            [SVProgressHUD showErrorWithStatus:@"文件已存在"];
+            return YES;
+        }
+//        [MRTools creatFilePathInManager:sourceName];
+        BOOL isSuccess = [fileManager copyItemAtPath:string toPath:filePath error:nil];
+        if (isSuccess == YES) {
+            NSLog(@"拷贝成功");
+//            [SVProgressHUD showSuccessWithStatus:@"文件拷贝成功"];
+        } else {
+            NSLog(@"拷贝失败");
+//            [SVProgressHUD showErrorWithStatus:@"文件拷贝失败"];
+        }
+    }
+    NSLog(@"application:openURL:options:");
+    return  YES;
+}
 
 
 #pragma mark - Core Data stack
