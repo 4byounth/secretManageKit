@@ -1,0 +1,28 @@
+PODS:
+  - BCGenerator (0.9.3):
+    - CBBase58
+    - CBSecp256k1
+  - CBBase58 (0.9.1):
+    - OpenSSL-Universal
+  - CBSecp256k1 (0.9.0)
+  - OpenSSL-Universal (1.0.2.13)
+
+DEPENDENCIES:
+  - BCGenerator
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - BCGenerator
+    - CBBase58
+    - CBSecp256k1
+    - OpenSSL-Universal
+
+SPEC CHECKSUMS:
+  BCGenerator: 635ee1636b8241606d2c9bf00da23c3cd1664695
+  CBBase58: a86f26f59eaf3fbba2d9b81e3ef5b02563cdab3d
+  CBSecp256k1: d8a1c651b1e5dd1c35867e968ab4e7fd2430e4de
+  OpenSSL-Universal: 401888162f11c33ebbd46f782d9229da35c61327
+
+PODFILE CHECKSUM: 09df8c073f8c4250eb8fc67cfe2c87284844875e
+
+COCOAPODS: 1.6.0.beta.2

@@ -87,6 +87,7 @@
     NSData *pubkey = [CBSecp256k1 recoverPubkey:hash :sign];
     NSString *account = [createAccountController pubToAccount:pubkey];
     return account;
+
 }
 
 /*

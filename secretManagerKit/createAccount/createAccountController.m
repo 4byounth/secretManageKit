@@ -37,6 +37,7 @@ Byte* intmax_tToBytes(intmax_t num){
     for(int i = 0;i<LEN_PRIKEY;i++){
         int offset = (LEN_PRIKEY-1-i)*8;
         target[i] = (Byte)((num>>offset) & 0xFF);
+        NSLog(@"%hhu",target[i]);
     }
     return target;
 }
@@ -55,20 +56,8 @@ Byte* intmax_tToBytes(intmax_t num){
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    
-    // Do any additional setup after loading the view.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)click_create_account:(id)sender {
     if(![_field_pwd.text  isEqual: @""] && ![_field_confire_pwd.text  isEqual: @""]){
@@ -84,7 +73,6 @@ Byte* intmax_tToBytes(intmax_t num){
             //密码验证通过之后的处理代码
             //调用账号生成函数,生成账号
             NSData *priData = [[NSData alloc] initWithBytesNoCopy:[self getPriKey] length:32];
-//            NSData *priData = [NSData hexStringToData:@"b774e289f9fbc80d7197f40539bae7d8f16e533d20da2d250f606d5987efcc4f"];
             BTCKey *btckey = [[BTCKey alloc] initWithPrivateKey:priData];
             btckey.publicKeyCompressed = YES;
             NSData *pubKey = [CBSecp256k1 generatePublicKeyWithPrivateKey:priData compression:YES];
@@ -108,7 +96,7 @@ Byte* intmax_tToBytes(intmax_t num){
                 });
             }];
             
-            
+                  
         }
     }
     else{
@@ -154,8 +142,8 @@ Byte* intmax_tToBytes(intmax_t num){
 //获取私钥
 -(Byte *) getPriKey{
     Byte *pri = (Byte *)malloc(LEN_PRIKEY);
-    srand((unsigned int)NSTimeIntervalSince1970*1000);
-    long rand = random();
+    srandom((unsigned int)NSTimeIntervalSince1970*1000);
+    long rand = arc4random();
 //    long rand = 132032465123;
     pri = intmax_tToBytes(rand);
     return pri;

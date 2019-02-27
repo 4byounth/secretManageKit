@@ -52,16 +52,19 @@
 }
 
 - (IBAction)click_caculate:(id)sender {
-    if(_btn_msg.selected){
-        NSData *hash = [sign_class HashMessage:_field_msg.text];
-        NSString *hexstring = [hash dataToHexString];
-        _view_result.text = hexstring;
+    if(![_field_msg.text isEqualToString:@""]){
+        if(_btn_msg.selected){
+            NSData *hash = [sign_class HashMessage:_field_msg.text];
+            NSString *hexstring = [hash dataToHexString];
+            _view_result.text = hexstring;
+        }
+        else{
+            NSData *hash = [sign_class HashFile:_field_msg.text];
+            NSString *hexstring = [hash dataToHexString];
+            _view_result.text = hexstring;
+        }
     }
-    else{
-        NSData *hash = [sign_class HashFile:_field_msg.text];
-        NSString *hexstring = [hash dataToHexString];
-        _view_result.text = hexstring;
-    }
+    
 }
 - (IBAction)cancelSelect:(UIStoryboardSegue*) segue{
     [self dismissViewControllerAnimated:YES completion:nil];

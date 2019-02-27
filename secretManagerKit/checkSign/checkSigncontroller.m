@@ -44,16 +44,18 @@
 }
 
 - (IBAction)click_verify:(UIButton *)sender {
-    if(_btn_msg.selected == YES){
-//        NSString *account = [sign_class VerifyFile:_field_msg.text :[NSData hexStringToData:_field_sign]];
-        NSData *sign = [NSData hexStringToData:_field_sign.text];
-//        NSString *account = [sign_class VerifyMessage:@"222222" :[NSData hexStringToData:_field_sign]];
-        NSString *account = [sign_class VerifyMessage:_field_msg.text:sign];
-        NSLog(@"%@",account);
-        _view_result.text = account;
-    }
-    else{
-        
+    if(![_field_msg.text  isEqual: @""] && ![_field_sign.text  isEqual: @""]){
+        if(_btn_msg.selected == YES){
+            NSData *sign = [NSData hexStringToData:_field_sign.text];
+            NSString *account = [sign_class VerifyMessage:_field_msg.text:sign];
+            NSLog(@"%@",account);
+            _view_result.text = account;
+        }
+        else{
+            NSData *sign = [NSData hexStringToData:_field_sign.text];
+            NSString *account = [sign_class VerifyFile:_field_msg.text:sign];
+            _view_result.text = account;
+        }
     }
 }
 - (IBAction)click_msg:(UIButton *)sender {
